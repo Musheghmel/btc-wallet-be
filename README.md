@@ -3,6 +3,8 @@
 
 Simple BTC wallet SPA be
 
+Demo: http://212.109.199.228/
+
 ## Requirements
 
 - Node, MongoDB and npm
