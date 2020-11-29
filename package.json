@@ -1,0 +1,42 @@
+{
+  "main": "app.js",
+  "name": "extension-platform",
+  "version": "1.0.0",
+  "scripts": {
+    "production": "echo \"import config from './config.production.js'; export default config;\" > ./modules/RENDERER/web-apps/commmon/config.js && webpack --config ./webpack.config.js && node app.js",
+    "test": "echo \"import config from './config.test.js'; export default config;\"> ./modules/RENDERER/web-apps/common/config.js && webpack --config ./webpack.config.dev.js && node app.js",
+    "local": "echo \"import config from './config.local.js'; export default config;\" > ./modules/RENDERER/web-apps/common/config.js && webpack --config ./webpack.config.dev.js && node app.js",
+    "launch": "webpack --config ./webpack.config.js && node app.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "autoprefixer": "^9.7.6",
+    "bip32-utils": "^0.11.1",
+    "bip39": "^3.0.3",
+    "bitcoinjs-lib": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "mongoose": "^5.6.0",
+    "mongoose-timestamp": "^0.6.0",
+    "morgan": "^1.9.1",
+    "node-gyp": "^5.0.0",
+    "nodemon": "^2.0.4",
+    "request-promise": "^4.2.4",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.9.0"
+  },
+  "jshintConfig": {
+    "esversion": 9,
+    "strict": "implied",
+    "devel": true,
+    "node": true,
+    "globals": {}
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  }
+}
