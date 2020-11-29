@@ -1,18 +1,30 @@
-# Building a RESTful API in Node and Express
 
-Using the new Express 4.0 Router to build an API
+# btc-wallet
 
-[Read the tutorial](http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4)
+Simple BTC wallet SPA be
 
 ## Requirements
 
-- Node and npm
+- Node, MongoDB and npm
 
-## Installation
+run node app.js after npm install.
 
-- Clone the repo: `git clone git@github.com:scotch-io/node-api`
-- Install dependencies: `npm install`
-- Start the server: `node server.js`
+App runs on 9025 port, you can change it in config.js
 
-## Testing the API
-Test your API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop)
+
+config.js
+
+```js
+const Config = {
+  version: "0.0.1",
+  apiVersion: "1.0",
+  listeningPort: 9025
+};
+
+Config.mongoDB = {
+  "host": "mongodb://localhost:27017",
+  "database": "btc-wallet",
+  "configs": "connectTimeoutMS=300000",
+  "isDebug": true
+};
+```
