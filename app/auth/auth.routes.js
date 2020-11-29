@@ -5,4 +5,8 @@ const auth = async function(req, res) {
   return await AuthManager.login(login);
 };
 
-module.exports = { auth };
+const signup = async function(req, res) {
+  return await AuthManager.register();
+}
+
+module.exports = { signup, auth };

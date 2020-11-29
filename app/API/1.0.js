@@ -6,7 +6,6 @@ const SessionManager = require("../auth/auth.manager");
 const initialize = async function (app) {
 
   const authRoutes = require('../auth/auth.routes');
-  const userRoutes = require('../user/user.routes');
   const walletsRoutes = require('../wallets/wallets.routes');
   const transactionsRoutes = require('../transactions/transactions.routes');
 
@@ -31,7 +30,7 @@ const initialize = async function (app) {
   };
 
   addHandler('post', '/api/auth', authRoutes.auth, false);
-  addHandler('post', '/api/signup', userRoutes.signup, false);
+  addHandler('post', '/api/signup', authRoutes.signup, false);
   addHandler('get', '/api/wallets', walletsRoutes.getWallets, true);
   addHandler('post', '/api/wallets', walletsRoutes.createNewWallet, true);
   addHandler('get', '/api/transactions', transactionsRoutes.getTransactions, true);
